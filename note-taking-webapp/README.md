@@ -18,7 +18,7 @@ The project was developed as part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
 
 note-taking-webapp/
@@ -50,7 +50,6 @@ note-taking-webapp/
 │
 ├── requirements.txt
 ├── .env
-|-- .gitignore
 ├── README.md
 └── LICENSE
 
