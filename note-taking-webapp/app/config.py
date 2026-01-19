@@ -1,10 +1,10 @@
 import os
-from dotenv import load_dotenv
-
-# Load the .env file
-load_dotenv()
 
 class Config:
-    SECRET_KEY = os.getenv('SECRET_KEY', 'devsecret')
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'devsecret')
+    SQLALCHEMY_DATABASE_URI = os.environ.get(
+        'DATABASE_URL', 
+        'mysql+pymysql://root:MyStrongPass123!@localhost/notes_app'
+    )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+

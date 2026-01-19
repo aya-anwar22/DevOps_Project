@@ -24,8 +24,8 @@ The project was developed as part of the **Digital Egypt Pioneers Initiative**.
 note-taking-webapp/
 │
 ├── app/
-│   ├── **init**.py
-│   ├── app.py
+│   ├── **__init__**.py
+│   ├── run.py
 │   ├── config.py
 │   ├── models.py
 │   ├── routes.py
