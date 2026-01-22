@@ -1,0 +1,20 @@
+name: Deploy Note App
+
+on:
+  push:
+    branches: [ main ] 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH and Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: 13.217.131.112  
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }} 
+          script: |
+            cd /home/ec2-user/DevOps_Project/note-taking-webapp
+            git pull origin main
+            sudo systemctl restart noteapp
